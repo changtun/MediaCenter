@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">MediaCenter</string>
+    <string name="item_video_player">视频播放</string>
+    <string name="item_video_recorder">视频录制</string>
+    <string name="item_music_player">音乐播放</string>
+    <string name="item_camera">照相机</string>
+
+</resources>

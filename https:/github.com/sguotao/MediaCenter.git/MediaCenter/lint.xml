@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ContentDescription">
+        <ignore path="res/layout/music_album.xml" />
+        <ignore path="res/layout/music_lyric.xml" />
+    </issue>
+</lint>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/guide_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dip" >
+
+    <com.pbi.center.view.CustomImageView
+        android:id="@+id/civ_01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:scaleType="matrix"
+        android:src="@drawable/icon_03" />
+
+    <com.pbi.center.view.CustomImageView
+        android:id="@+id/civ_02"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:scaleType="matrix"
+        android:src="@drawable/bottom" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <com.pbi.center.view.CustomImageView
+            android:id="@+id/civ_music"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:scaleType="matrix"
+            android:src="@drawable/icon_music" />
+
+        <com.pbi.center.view.CustomImageView
+            android:id="@+id/civ_video"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:scaleType="matrix"
+            android:src="@drawable/icon_video" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dip"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <com.pbi.center.view.CustomImageView
+            android:id="@+id/civ_game"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:scaleType="matrix"
+            android:src="@drawable/icon_game" />
+
+        <com.pbi.center.view.CustomImageView
+            android:id="@+id/civ_camera"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:scaleType="matrix"
+            android:src="@drawable/icon_camera" />
+    </LinearLayout>
+
+</LinearLayout>

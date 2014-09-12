@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guide_bg" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_repeat_control"
+            android:layout_width="35dip"
+            android:layout_height="35dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5.0dip"
+            android:background="@drawable/repeat_selector" />
+
+        <Button
+            android:id="@+id/bt_time_control"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/clock_selector" />
+
+        <TextView
+            android:id="@+id/tv_music_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="23dp"
+            android:layout_toRightOf="@+id/bt_repeat_control"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:id="@+id/seekbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/player_progresslayout_bg" >
+
+            <SeekBar
+                android:id="@+id/sb_playing_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/player_progress_bg"
+                android:progressDrawable="@drawable/seekbar_img"
+                android:thumb="@drawable/media_player_progress_button" />
+
+            <TextView
+                android:id="@+id/tv_final_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/sb_playing_progress"
+                android:paddingLeft="10dip"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_current_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sb_playing_progress"
+                android:layout_toLeftOf="@id/tv_final_progress"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekbarLayout"
+            android:layout_marginBottom="5.0dip"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip" >
+
+            <Button
+                android:id="@+id/bt_play_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/play_selector" />
+
+            <Button
+                android:id="@+id/bt_previous_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/bt_play_music"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dip"
+                android:background="@drawable/previous_music_selector" />
+
+            <Button
+                android:id="@+id/bt_next_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/bt_play_music"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/next_music_selector" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer_layout"
+        android:layout_below="@+id/header_layout" >
+
+        <!-- 自定义滑动页面类的 -->
+
+        <com.pbi.center.view.CustomFlingGalleryView
+            android:id="@+id/fgv_player_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" >
+
+            <include
+                android:id="@+id/music_list"
+                layout="@layout/music_list" />
+
+            <include
+                android:id="@+id/music_album"
+                layout="@layout/music_album" />
+
+            <include
+                android:id="@+id/music_lyric"
+                layout="@layout/music_lyric" />
+        </com.pbi.center.view.CustomFlingGalleryView>
+    </RelativeLayout>
+
+</RelativeLayout>
